@@ -56,17 +56,17 @@
     </fieldset>
     <fieldset>
         <legend>Reise</legend>
-        <label for="Anfangszeitpunkt">Anfangszeitpunkt:</label>
-        <input id="Anfangszeitpunkt" name="Anfangszeitpunkt" type="date">
-        <label for="Endzeitpunkt">Endzeitpunkt:</label>
-        <input id="Endzeitpunkt" name="Endzeitpunkt" type="date">
+        <label for="anfangszeitpunkt">Anfangszeitpunkt:</label>
+        <input id="anfangszeitpunkt" name="Anfangszeitpunkt" type="date">
+        <label for="endzeitpunkt">Endzeitpunkt:</label>
+        <input id="endzeitpunkt" name="Endzeitpunkt" type="date">
         <p></p>
-        <label for="Reisedauer">Reisedauer:</label>
-        <input id="Reisedauer" name="Reisedauer" type="number" min="1" max="21" required>
+        <label for="reisedauer">Reisedauer:</label>
+        <input id="reisedauer" name="Reisedauer" type="number" min="1" max="21" required>
         <p></p>
         <label> Zielort:
-            <input type="search" id="Zielreise" list="Reiseziele" name="Zielort"/>
-            <datalist id="Reiseziele">
+            <input type="search" id="zielreise" list="reiseziele" name="Zielort"/>
+            <datalist id="reiseziele">
                 <option value="Paris"></option>
                 <option value="New York"></option>
                 <option value="London"></option>
@@ -82,21 +82,21 @@
     </fieldset>
     <fieldset>
         <legend>Kunde</legend>
-        <label for="Emailadress">Emailadresse:</label>
-        <input id="Emailadress" name="Emailadress" type="email"/>
+        <label for="emailadress">Emailadresse:</label>
+        <input id="emailadress" name="Emailadress" type="email"/>
         <p></p>
-        <label for="AnzahlPersonen">Anzahl Personen:</label>
-        <input id="AnzahlPersonen" name="Anzahl von Personen" type="number" required min="1">
+        <label for="anzahlPersonen">Anzahl Personen:</label>
+        <input id="anzahlPersonen" name="Anzahl von Personen" type="number" required min="1">
     </fieldset>
     <fieldset>
         <legend>Dienstleistung</legend>
         <label> Optionale Dienstleistungen:
-            <input type="checkbox" id="PCI" name="Op_Dienstleistung[]" value="Priority-Check-In">
-            <label for="PCI"> Priority-Check-In </label>
-            <input type="checkbox" id="zH" name="Op_Dienstleistung[]" value="zusätzliches Handgepäck">
-            <label for="zH"> zusätzliches Handgepäck </label>
-            <input type="checkbox" id="BeM" name="Op_Dienstleistung[]" value="Buchung eines Mietwagens">
-            <label for="BeM"> zusätzliches Gepäck </label>
+            <input type="checkbox" id="pci" name="Op_Dienstleistung[]" value="Priority-Check-In">
+            <label for="pci"> Priority-Check-In </label>
+            <input type="checkbox" id="zh" name="Op_Dienstleistung[]" value="zusätzliches Handgepäck">
+            <label for="zh"> zusätzliches Handgepäck </label>
+            <input type="checkbox" id="bem" name="Op_Dienstleistung[]" value="Buchung eines Mietwagens">
+            <label for="bem"> zusätzliches Gepäck </label>
         </label>
         <p></p>
         <label> Zusätzliche Dienstleistungen:

@@ -1,14 +1,115 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title>Reisebuchungs-Formular</title>
+    <meta charset="UTF-8">
+    <title>Reisebuchungs-Formular</title>
 
 </head>
 <body>
 
 <h1>Reisebuchungs-Formular</h1>
-
-
+<form action="https://it.bzz.ch/demo/formdata/index.php" method="post">
+    <fieldset>
+        <legend>Flugzeug</legend>
+        <label> Land:
+            <select name="Abflughafens" size="1">
+                <optgroup label="Nachbarländer von Schweiz">
+                    <option>Deutschland</option>
+                    <option>Österreich</option>
+                    <option>Italien</option>
+                    <option>Frankreich</option>
+                </optgroup>
+                <optgroup label="Andere Länder">
+                    <option>USA</option>
+                    <option>England</option>
+                    <option>Polen</option>
+                    <option>Brasilien</option>
+                    <option>Mexiko</option>
+                    <option>Kroatien</option>
+                    <option>Australien</option>
+                </optgroup>
+            </select>
+        </label>
+        <p></p>
+        <label> Fluggesellschaft:
+            <select name="Fluggesellschaft" size="1">
+                <option>Swiss</option>
+                <option>Delta</option>
+                <option>British airways</option>
+                <option>Eurowings</option>
+                <option>Air France</option>
+                <option>Condor</option>
+                <option>Austrian Airlines</option>
+            </select>
+        </label>
+    </fieldset>
+    <fieldset>
+        <legend>Unterkunft</legend>
+        <label> Art der Unterkunft:
+            <input type="radio" id="a" name="Unterkunft" value="Hotel">
+            <label for="a"> Hotel </label>
+            <input type="radio" id="b" name="Unterkunft" value="Ferienwohnung">
+            <label for="b"> Ferienwohnung </label>
+            <input type="radio" id="c" name="Unterkunft" value="Hostel">
+            <label for="c"> Hostel </label>
+        </label>
+    </fieldset>
+    <fieldset>
+        <legend>Reise</legend>
+        <label for="Anfangszeitpunkt">Anfangszeitpunkt:</label>
+        <input id="Anfangszeitpunkt" name="Anfangszeitpunkt" type="date">
+        <label for="Endzeitpunkt">Endzeitpunkt:</label>
+        <input id="Endzeitpunkt" name="Endzeitpunkt" type="date">
+        <p></p>
+        <label for="Reisedauer">Reisedauer:</label>
+        <input id="Reisedauer" name="Reisedauer" type="number" min="1" max="21" required>
+        <p></p>
+        <label> Zielort:
+            <input type="search" id="Zielreise" list="Reiseziele" name="Zielort"/>
+            <datalist id="Reiseziele">
+                <option value="Paris"></option>
+                <option value="New York"></option>
+                <option value="London"></option>
+                <option value="Amsterdam"></option>
+                <option value="Phang Nga"></option>
+                <option value="Trolltunga"></option>
+                <option value="Berlin"></option>
+                <option value="Bali"></option>
+                <option value="Dubrovnik"></option>
+            </datalist>
+        </label>
+        <button>Suchen</button>
+    </fieldset>
+    <fieldset>
+        <legend>Kunde</legend>
+        <label for="Emailadress">Emailadresse:</label>
+        <input id="Emailadress" name="Emailadress" type="email"/>
+        <p></p>
+        <label for="AnzahlPersonen">Anzahl Personen:</label>
+        <input id="AnzahlPersonen" name="Anzahl von Personen" type="number" required min="1">
+    </fieldset>
+    <fieldset>
+        <legend>Dienstleistung</legend>
+        <label> Optionale Dienstleistungen:
+            <input type="checkbox" id="PCI" name="Op_Dienstleistung[]" value="Priority-Check-In">
+            <label for="PCI"> Priority-Check-In </label>
+            <input type="checkbox" id="zH" name="Op_Dienstleistung[]" value="zusätzliches Handgepäck">
+            <label for="zH"> zusätzliches Handgepäck </label>
+            <input type="checkbox" id="BeM" name="Op_Dienstleistung[]" value="Buchung eines Mietwagens">
+            <label for="BeM"> zusätzliches Gepäck </label>
+        </label>
+        <p></p>
+        <label> Zusätzliche Dienstleistungen:
+            <input type="checkbox" id="ab" name="Zu_Dienstleistung[]" value="Reiseversicherung">
+            <label for="ab"> Reiseversicherung </label>
+            <input type="checkbox" id="bb" name="Zu_Dienstleistung[]" value="Flughafentransfer ">
+            <label for="bb"> Flughafentransfer </label>
+            <input type="checkbox" id="cb" name="Zu_Dienstleistung[]" value="zusätzliches Gepäck">
+            <label for="cb"> zusätzliches Gepäck </label>
+        </label>
+    </fieldset>
+    <button type="reset">Zurücksetzen</button>
+    <button type="submit">Absenden</button>
+</form>
 </body>
 </html>
